@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Parent Component">
+        <h2>This is a Parent Component</h2>
+        <lightning-button label = "Toggle Child" onclick={toggleChild}></lightning-button>
+            <template if:true={showChild}>
+            <c-child-component onremove={handleChildComponentRemove} mydata={mydata} onupdatedata={handleUpdate}></c-child-component>
+            <h1 slot="header">Title for slot</h1>
+            <div slot="body">Space for main content</div>
+        </template>
+        <template if:false={showChild}>
+            <p>Child Component has been removed from DOM</p>
+        </template>
+    </lightning-card>
+</template>

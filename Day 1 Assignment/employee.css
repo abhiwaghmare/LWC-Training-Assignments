@@ -1,0 +1,21 @@
+
+.grid-Container {
+    display: grid;
+    column-gap: 50px;
+    grid-auto-flow: column;
+  }
+  
+  .grid-item {
+    background-color: aquamarine;;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;;
+    font-size: 15px;
+    text-align: center;
+    max-width: 250px;
+    max-height: 250px;
+  }
+
+.grid-item:hover{
+    background-color: rgb(231, 106, 106);
+}

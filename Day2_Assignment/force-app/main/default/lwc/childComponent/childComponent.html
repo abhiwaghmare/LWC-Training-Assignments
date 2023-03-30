@@ -1,0 +1,14 @@
+<template>
+    <h2>This is the child component</h2>
+    <lightning-card title="Data">
+        <slot name="header"></slot>
+        <slot name="body"></slot>
+        <template for:each={mydata} for:item= "item">
+            <div key={item.name}>
+                <p>Name:{item.Name}</p>
+                <p>Age:{item.Age}</p>
+            </div>
+        </template>
+        <button onclick={handleUpdate}>Update John's Age</button>
+    </lightning-card>
+</template>
